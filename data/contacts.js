@@ -22,7 +22,7 @@ export default [
         "isActive": true,
         "balance": 1401.67,
         "picture": "http://placehold.it/32x32",
-        "age": 28,
+        "age": 29,
         "eyeColor": "blue",
         "firstName": "George",
         "lastName": "Nicholson",

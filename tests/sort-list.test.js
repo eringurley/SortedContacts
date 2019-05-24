@@ -20,7 +20,7 @@ const Pruitt =
 };
 const George =
 {
-    "age": 28,
+    "age": 29,
     "firstName": "George",
     "lastName": "Nicholson",
     "favoriteFruit": "strawberry"
@@ -42,7 +42,6 @@ test('sort by first name', assert => {
     //assert
     assert.deepEqual(sorted[Cantu, George, Pruitt]);
 
-
 });
 
 function sortList(contacts, sortOptions) {
@@ -58,3 +57,33 @@ function sortList(contacts, sortOptions) {
         return 0;
     });
 }
+
+test('sort by age', assert => {
+    //arrange
+    const sortOptions = {
+        property: 'age'
+    };
+
+
+    //act
+    const sorted = sortList(contacts, sortOptions);
+
+    //assert
+    assert.deepEqual(sorted[George, Cantu, Pruitt]);
+
+});
+
+test('sort by fruit', assert => {
+    //arrange
+    const sortOptions = {
+        property: 'favoriteFruit'
+    };
+
+
+    //act
+    const sorted = sortList(contacts, sortOptions);
+
+    //assert
+    assert.deepEqual(sorted[Pruitt, Cantu, George]);
+
+});
