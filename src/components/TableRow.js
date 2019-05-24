@@ -10,9 +10,9 @@ class TableRow extends Component {
         return /*html*/ `
             <tr>
                 <td>${contact.firstName}</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>${contact.lastName}</td>
+                <td>${contact.age}</td>
+                <td>${contact.favoriteFruit}</td>
             </tr>
         `;
     }

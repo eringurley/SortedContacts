@@ -2,10 +2,18 @@ td {
     background-color: lightblue;
 }
 
-table{
+table {
     border: 1px solid black;
 }
 
-th{
+th {
     border: 1px solid rgb(138, 15, 15);
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(146, 221, 255);
 }
