@@ -7,14 +7,18 @@ class ContactTable extends Component {
     render() {
         const table = this.renderDOM();
         const tableHeader = new TableHeader();
+        const contacts = this.props.contacts;
         const tableHeaderDOM = tableHeader.render();
 
         const tableBody = table.querySelector('tbody');
-
-        const tableRow = new TableRow();
-        const tableRowDOM = tableRow.render();
         
-        tableBody.appendChild(tableRowDOM);
+        contacts.forEach(contact => { 
+            const tableRow = new TableRow({ contact });
+            const tableRowDOM = tableRow.render();
+            tableBody.appendChild(tableRowDOM);
+        });
+
+        
         table.insertBefore(tableHeaderDOM, tableBody);
         return table;
     }
