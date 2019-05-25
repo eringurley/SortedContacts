@@ -6,9 +6,11 @@ class ContactTable extends Component {
     
     render() {
         const table = this.renderDOM();
-        const tableHeader = new TableHeader();
         const contacts = this.props.contacts;
-        const tableHeaderDOM = tableHeader.render();
+        const onSort = this.props.onSort;
+        
+        const tableHeader = new TableHeader({ onSort });
+        const tableHeaderDOM = tableHeader.renderDOM();
 
         const tableBody = table.querySelector('tbody');
         
@@ -18,7 +20,6 @@ class ContactTable extends Component {
             tableBody.appendChild(tableRowDOM);
         });
 
-        
         table.insertBefore(tableHeaderDOM, tableBody);
         return table;
     }
