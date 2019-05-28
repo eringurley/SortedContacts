@@ -32,8 +32,8 @@ class TableHeader extends Component {
             <tr>
                 <th><button>First Name: </button></th>
                 <th><button>Last Name: </button></th>
-                <th><button>Favorite Fruit: </button></th>
                 <th><button>Age: </button></th>
+                <th><button>Favorite Fruit: </button></th>
             </tr>
             </thead>
         `;
